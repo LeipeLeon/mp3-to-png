@@ -7,7 +7,8 @@ require 'gruff'
 
 class CreateImage
   def initialize(data, info, image_file, input_type)
-    g = Gruff::Line.new("800x150", false)
+    size = ENV['DEBUG'] ? 800 : "800x150"
+    g = Gruff::Line.new(size, false)
     # g.theme = {
     #   :colors => ['#cccccc', 'white'], 
     #   :background_colors => ['black', 'black']
@@ -20,8 +21,10 @@ class CreateImage
     # g.theme_greyscale
     g.hide_dots = true
     g.hide_line_markers = true
-    g.hide_legend       = true
-    g.hide_title        = true
+    unless ENV['DEBUG']
+      g.hide_legend = true
+      g.hide_title  = true
+    end
     g.hide_line_numbers = true
     g.margins = 0
     g.top_margin = 0
