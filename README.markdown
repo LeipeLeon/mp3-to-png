@@ -37,7 +37,8 @@ Some outputted [examples](examples/)
 
 The lower the rate, the more samples are used. But this also makes the waveform less dense.
 
-`Rate:    4, Time taken: 13.44 sec
+`
+Rate:    4, Time taken: 13.44 sec
 Rate:   16, Time taken: 3.68 sec
 Rate:   32, Time taken: 1.94 sec
 Rate:   64, Time taken: 0.95 sec
@@ -45,7 +46,8 @@ Rate:  128, Time taken: 0.50 sec
 Rate:  256, Time taken: 0.35 sec
 Rate:  512, Time taken: 0.20 sec
 Rate: 1024, Time taken: 0.12 sec
-Rate: 2048, Time taken: 0.08 sec`
+Rate: 2048, Time taken: 0.08 sec
+`
 
 ![example at a rate of 4](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0004.png "Rate of 4")
 ![example at a rate of 512](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0512.png "Rate of 512")
