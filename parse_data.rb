@@ -5,8 +5,7 @@
 require 'create_image'
 
 class ParseData
-  # SCAN_RATES = [4,16,32,64,128,256, 512]
-  SCAN_RATES = [256, 512, 512 * 2]
+  SCAN_RATES = [4,16,32,64,128,256, 512, 1024, 2048]
   
   def initialize(fp, in_type = 'unknown')
     SCAN_RATES.each do |rate|
