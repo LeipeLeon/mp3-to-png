@@ -3,35 +3,17 @@
 # ./wave_file.rb file.raw
 
 require 'create_image'
-
-
-
-
-
+require 'parse_data'
 
 
 file = File.open('file.raw')
-[4,16,32,64,128,256].each do |rate|
-  t = Time.now
-  data = []
-  info = "Rate: %d" % rate
-  input_type = "File @ #{rate}"
-  image_file = "generated_from_file_#{rate}.png"
 
-  while !file.eof?
-    first_channel_data, second_channel_data = file.read(rate).unpack('ss')
-    data << first_channel_data
-  end
 
-  file.rewind
 
-  puts data.inspect if ENV['DEBUG']
-  info << ", Samples: %d" % data.length
 
-  CreateImage.new(data, info, image_file, input_type)
+ParseData.new(file, 'File')
 
-  puts "Rate: %3d, Time taken: %02.2f sec" % [rate, Time.now - t]
-end
+
 # `open generated_from_file_#{@rate}.png`  
 
 # ./wave_file.rb
