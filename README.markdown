@@ -35,6 +35,8 @@ Some Stats
 
 Some outputted [examples](http://wendbaar.nl/github/)
 
+(test done with a 24 kbit/s, 24000 Hz mono file)
+
 The lower the rate, the more samples are used. But this also makes the waveform less dense.
 
 	Rate:    4, Time taken: 13.44 sec
