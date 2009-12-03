@@ -1,0 +1,38 @@
+Ben een beetje aan het experimenteren geweest (gewoon om te kijken of ik het kan :) en zie de attachments het resultaat!
+
+de peaks heb ik met mpg123 gevonden (sudo port install mpg123)
+de plaatjes met gruff (needs ImageMagick)
+
+Gemiddeld duurt het zo'n 25 sec. om de png te genereren, de peaks zijn binnen 1 a 2 seconden gegenereerd
+
+Ik heb 2 varianten, een 'stream' en 'file' variant.
+In de stream doe ik waarschijnlijk iets fout met het unpacken (scan) waardoor de data niet helemaal klopt.
+
+# stream variant
+laptop:berl@[~/tmp] mpg123 -s -d 192 2009-11-15-1830.mp3 | ./wave_stream.rb
+
+# file variant
+laptop:berl@[~/tmp] mpg123 -d 192 -O file.raw 2009-11-15-1830.mp3
+laptop:berl@[~/tmp] ./wave_file.rb file.raw
+
+Data heb ik kunnen beperken met de -d vlag:
+-d n   --doublespeed n    play only every nth frame
+
+Nu de plaatjes nog wat mooier stijlen :)
+
+(geek voor de gein: doe eens mpg123 -d 192 bestand.mp3, dan gaat het geluid rechtstreeks naar je audio kaart :))
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Hoi Leon,
+
+Super cool man. Ben zelf ook even aan het spelen geweest met jouw code. Het genereren van de grafiek kan nog behoorlijk sneller. Gebruik van mpg123 is eenvoudig, snel en werkt gewoon.
+
+Voor een nauwkeurige waveform van 800 pixels breed heb je 1600 datapunten nodig (2x zo veel datapunten als pixels).Elk MP3 frame heeft 26ms aan audio-data (zie http://www.mp3-converter.com/mp3codec/frames.htm), dus MP3 heeft altijd ongeveer 1s/26ms = 38,5 frames/sec.  Je reduceert de data door te samplen op de MP3 frames (1 per 192 frames). Effectief neem je daarmee 1 frame van 26 ms per 5 sec (=192/38,5).
+
+Stel je hebt een opname van 90 minuten (90*60= 5400 sec). Je hebt dan 5400 * 38,5 = 207900 frames. Daarvan houd je er 207900 / 192 = 1082 over. Deze 1082 frames worden door mpg123 omgezet in 1082 waveforms van 26ms elk, bij elkaar (1082 x 26ms=) 28,132 seconde. Bij een samplerate van 22050 Hz krijg je dus in file.raw 620310 samples! Dat is wat Gruff nu in een plaatje probeert te krijgen... veel meer dan de benodigde 1600 punten dus.
+
+Hoe je het op de juiste manier downsampled zonder de overall karakteristiek van het bestand kwijt raakt is een oefening voor de lezer.... Je moet volgens mij in ieder geval toe naar een situatie waar je Gruff minimaal 2x zo veel datapunten aanbied (maar niet veel meer) dan het plaatje breed moet zijn.
+
+wave_stream.rb kun je werkend maken door simpelweg "file=$stdin" te doen.
+
