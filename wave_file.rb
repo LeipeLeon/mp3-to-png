@@ -4,6 +4,13 @@
 
 require 'create_image'
 
+
+
+
+
+
+
+file = File.open('file.raw')
 [4,16,32,64,128,256].each do |rate|
   t = Time.now
   data = []
@@ -11,12 +18,13 @@ require 'create_image'
   input_type = "File @ #{rate}"
   image_file = "generated_from_file_#{rate}.png"
 
-  File.open('file.raw') do |file|
-    while !file.eof?
-      first_channel_data, second_channel_data = file.read(rate).unpack('ss')
-      data << first_channel_data
-    end
+  while !file.eof?
+    first_channel_data, second_channel_data = file.read(rate).unpack('ss')
+    data << first_channel_data
   end
+
+  file.rewind
+
   puts data.inspect if ENV['DEBUG']
   info << ", Samples: %d" % data.length
 
