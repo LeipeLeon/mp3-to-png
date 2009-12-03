@@ -33,27 +33,25 @@ ToDo:
 Some Stats
 ==========
 
-Some outputted [examples](examples/)
+Some outputted [examples](./examples/)
 
 The lower the rate, the more samples are used. But this also makes the waveform less dense.
 
-`
-Rate:    4, Time taken: 13.44 sec
-Rate:   16, Time taken: 3.68 sec
-Rate:   32, Time taken: 1.94 sec
-Rate:   64, Time taken: 0.95 sec
-Rate:  128, Time taken: 0.50 sec
-Rate:  256, Time taken: 0.35 sec
-Rate:  512, Time taken: 0.20 sec
-Rate: 1024, Time taken: 0.12 sec
-Rate: 2048, Time taken: 0.08 sec
-`
+	Rate:    4, Time taken: 13.44 sec
+	Rate:   16, Time taken: 3.68 sec
+	Rate:   32, Time taken: 1.94 sec
+	Rate:   64, Time taken: 0.95 sec
+	Rate:  128, Time taken: 0.50 sec
+	Rate:  256, Time taken: 0.35 sec
+	Rate:  512, Time taken: 0.20 sec
+	Rate: 1024, Time taken: 0.12 sec
+	Rate: 2048, Time taken: 0.08 sec
 
-![example at a rate of 4](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0004.png "Rate of 4")
-![example at a rate of 512](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0512.png "Rate of 512")
-![example at a rate of 2048](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_2048.png "Rate of 2048")
-![example at a rate of 16384](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_16384.png "Rate of 16384")
-![example at a rate of 32768](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_32768.png "Rate of 32768")
+![example at a rate of 4    ](http://wendbaar.nl/github/generated_from_file_0004.png "Rate of 4")
+![example at a rate of 512  ](http://wendbaar.nl/github/generated_from_file_0512.png "Rate of 512")
+![example at a rate of 2048 ](http://wendbaar.nl/github/generated_from_file_2048.png "Rate of 2048")
+![example at a rate of 16384](http://wendbaar.nl/github/generated_from_file_16384.png "Rate of 16384")
+![example at a rate of 32768](http://wendbaar.nl/github/generated_from_file_32768.png "Rate of 32768")
 
 More reading:
 ==========
