@@ -33,7 +33,7 @@ ToDo:
 Some Stats
 ==========
 
-Some outputted [examples](http://github.com/LeipeLeon/mp3-to-png/tree/master/examples/)
+Some outputted [examples](http://wendbaar.nl/github/)
 
 The lower the rate, the more samples are used. But this also makes the waveform less dense.
 
