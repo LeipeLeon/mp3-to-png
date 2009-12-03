@@ -1,3 +1,8 @@
+#
+# Created by Leon Berenschot on 2009-12-03.
+# Copyright (c) 2009 Wendbaar.nl. All rights reserved.
+
+require 'create_image'
 
 class ParseData
   # SCAN_RATES = [4,16,32,64,128,256, 512]
