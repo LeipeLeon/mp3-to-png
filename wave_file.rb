@@ -5,8 +5,8 @@
 require 'create_image'
 require 'parse_data'
 
-
-file = File.open('file.raw')
+infile = ARGV.first || 'file.raw'
+file = File.open(infile)
 
 
 
