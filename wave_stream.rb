@@ -8,18 +8,17 @@ rate = 4
 
 data = []
 info = "Rate: %d" % rate
-input_type = "Stream"
+input_type = "Stream @ #{rate}"
 image_file = "generated_from_stream_#{rate}.png"
 
 t = Time.now
 
-# file=$stdin
+file=$stdin
 
-$stdin.each do |line| 
-  line.scan(/^.{4}/).each do |var| # is this the right way?
-    first_channel_data, second_channel_data = var.unpack('ss')
-    data << first_channel_data
-  end
+
+while !file.eof?
+  first_channel_data, second_channel_data = file.read(rate).unpack('ss')
+  data << first_channel_data
 end
 
 info << ", Samples: %d" % data.length
