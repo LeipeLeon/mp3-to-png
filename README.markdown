@@ -58,8 +58,8 @@ The higher the rate, the less samples are used. This also makes the waveform les
 More reading:
 ==========
 
-Inside the MP3 Codec: [Frames](http://www.mp3-converter.com/mp3codec/frames.htm) 
-
+* [Inside the MP3 Codec: Frames](http://www.mp3-converter.com/mp3codec/frames.htm)  
+* [Rendering an mp3 as a waveform image in ruby??](http://www.ruby-forum.com/topic/160681#new)
 
 ---
 
