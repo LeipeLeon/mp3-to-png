@@ -47,11 +47,11 @@ Rate:  512, Time taken: 0.20 sec
 Rate: 1024, Time taken: 0.12 sec
 Rate: 2048, Time taken: 0.08 sec`
 
-![example at a rate of 4](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0004.png "Rate of 4") 4
-![example at a rate of 512](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0512.png "Rate of 512") 512
-![example at a rate of 2048](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_2048.png "Rate of 2048") 2048
-![example at a rate of 16384](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_16384.png "Rate of 16384") 16384
-![example at a rate of 32768](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_32768.png "Rate of 32768") 32768
+![example at a rate of 4](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0004.png "Rate of 4")
+![example at a rate of 512](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_0512.png "Rate of 512")
+![example at a rate of 2048](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_2048.png "Rate of 2048")
+![example at a rate of 16384](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_16384.png "Rate of 16384")
+![example at a rate of 32768](http://github.com/LeipeLeon/mp3-to-png/raw/master/examples/generated_from_file_32768.png "Rate of 32768")
 
 More reading:
 ==========
